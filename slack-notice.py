@@ -40,6 +40,7 @@ slack_data = {
     'text' : 'Parent process "' + parent + '", grandparent process "' + grandparent + '"',
     'icon_emoji' : ':' + str(args.iconemoji) + ':',
     'username' : args.username,
+    'parse' : 'full',
     'fields' : [ {
         'title' : args.title,
         'value' : message
