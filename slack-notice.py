@@ -78,9 +78,8 @@ slack_data = {
         } ]
     }
 
-if args.noescape is not True:
-    slack_data['attachments'][0]['mrkdwn_in'] = ['text', 'pretext', 'fields']
-    slack_data['mrkdwn'] = True
+slack_data['attachments'][0]['mrkdwn_in'] = ['text', 'pretext', 'fields']
+slack_data['mrkdwn'] = True
 
 # print(slack_data)
 response = requests.post(
