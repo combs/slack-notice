@@ -20,10 +20,10 @@ except psutil.AccessDenied:
 
 parser = argparse.ArgumentParser(description="Post to a Slack webhook. The default webhook is stored in /etc/slack/webhook-notice . Pipe your message text in via stdin (echo 'my message' | slack-notice)" )
 
-parser.add_argument('--noescape','-n',action='store_true')
-parser.add_argument('--description','-description', type=str, default="")
+parser.add_argument('--description','-d', type=str, default="")
 parser.add_argument('--iconemoji','-i', type=str, default="radio")
 parser.add_argument('--messagefile','-m', type=argparse.FileType('r'), default=sys.stdin)
+parser.add_argument('--noescape','-n',action='store_true')
 parser.add_argument('--severity','-s', type=str, choices=['notice','error','warning'], default="notice")
 parser.add_argument('--title','-t', type=str, default="")
 parser.add_argument('--username','-u', type=str, default=parent)
