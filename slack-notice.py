@@ -41,7 +41,7 @@ if args.noescape is not True:
     message = '```' + message + '```'
 
 if args.severity == 'error' and args.description != None:
-    args.description = "@channel"
+    args.description = "<!channel>"
 
 slack_data = {
     'color': colors[args.severity],
